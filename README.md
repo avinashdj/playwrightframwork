@@ -1,6 +1,7 @@
 # playwrightframwork
 Playwright framework
 
+# section 1 -- it is required when playwright project is created from scratch
 unzip the folder downloaded
 open the folder in vs code
 hit ctrl + shift + p - search Terminal: Select Defualt profile - click on init
@@ -20,11 +21,11 @@ Allure reports
 npm i -D allure-playwright
 npm i -D allure-commandline
 
-to see the trace -
-a. open trace.playwright.dev in browser
-b. open the trace zip file (to be downloaded from the html report generated using npx playwright show-report)
+# section 2 - for using the existing project from git
+npm install
 
 
+# section 3 - Added in package.json
 add the following to package.json script section for other commands
 
   "scripts": {
@@ -35,4 +36,9 @@ add the following to package.json script section for other commands
     "allure-reports": "allure genreate "
   },
 
-  After adding to scripts use the command - npm run tests:chrome
+# section 4 - to run the tests
+use npm run <command under scripts in package.json>
+
+# section 5 - to see the trace file
+a. open trace.playwright.dev in browser
+b. open the trace zip file (to be downloaded from the html report generated using npx playwright show-report)

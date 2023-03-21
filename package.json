@@ -7,14 +7,14 @@
     "test": "tests"
   },
   "scripts": {
-    "tests:chrome": "playwright test --config playwright.config.ts --project Chromium --headed",
-    "tests:firefox": "playwright test --config playwright.config.ts --project Firefox",
-    "tests:e2e": "playwright test --config e2e.config.ts --project Chromium --headed",
-    "tests:param": "playwright test --config param.config.ts --project Chromium",
-    "tests:e2e:allure": "playwright test --config playwright.config.ts --project Chromium --headed --reporter=allure-playwright",
-    "tests:api": "rm -r ./allure-results & playwright test --config api.config.ts --project Chromium --reporter=allure-playwright",
-    "tests:visual": "playwright test --config visual.config.ts --project Chromium --reporter=html",
-    "update:visual": "playwright test --config visual.config.ts --project Chromium --update-snapshots",
+    "tests:chrome": "playwright test --config ./config/playwright.config.ts --project Chromium --headed",
+    "tests:firefox": "playwright test --config ./config/playwright.config.ts --project Firefox",
+    "tests:e2e": "playwright test --config ./config/e2e.config.ts --project Chromium --headed",
+    "tests:param": "playwright test --config ./config/param.config.ts --project Chromium",
+    "tests:e2e:allure": "playwright test --config ./config/playwright.config.ts --project Chromium --headed --reporter=allure-playwright",
+    "tests:api": "rm -r ./allure-results & playwright test --config ./config/api.config.ts --project Chromium --reporter=allure-playwright",
+    "tests:visual": "playwright test --config ./config/visual.config.ts --project Chromium --reporter=html",
+    "update:visual": "playwright test --config ./config/visual.config.ts --project Chromium --update-snapshots",
     "gen-allure-reports": "allure generate ./allure-results --clean",
     "open-allure": "allure open ./allure-report",
     "open-html-report": "playwright show-report"

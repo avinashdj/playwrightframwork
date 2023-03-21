@@ -1,0 +1,33 @@
+{
+  "name": "playwright-demo",
+  "version": "1.0.0",
+  "description": "unzip the folder downloaded\r open the folder in vs code\r hit ctrl + shift + p - search Terminal: Select Defualt profile - click on init\r select Git Bash",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "tests:chrome": "playwright test --config playwright.config.ts --project Chromium --headed",
+    "tests:firefox": "playwright test --config playwright.config.ts --project Firefox",
+    "tests:e2e": "playwright test --config e2e.config.ts --project Chromium --headed",
+    "tests:param": "playwright test --config param.config.ts --project Chromium",
+    "tests:e2e:allure": "playwright test --config playwright.config.ts --project Chromium --headed --reporter=allure-playwright",
+    "tests:api": "rm -r ./allure-results & playwright test --config api.config.ts --project Chromium --reporter=html",
+    "tests:visual": "playwright test --config visual.config.ts --project Chromium --reporter=html",
+    "update:visual": "playwright test --config visual.config.ts --project Chromium --update-snapshots",
+    "gen-allure-reports": "allure generate ./allure-results --clean",
+    "open-allure": "allure open ./allure-report",
+    "open-html-report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.31.2",
+    "prettier": "^2.8.5"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.21.0",
+    "allure-playwright": "^2.1.0"
+  }
+}
